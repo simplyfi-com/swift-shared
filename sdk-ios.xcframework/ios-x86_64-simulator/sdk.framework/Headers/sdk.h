@@ -8,7 +8,7 @@
 
 @class SdkClientConfig, SdkRoutinesClient, SdkRoutineExecute, SdkRunnableResult, SdkKotlinArray<T>, SdkRoutine, SdkKotlinThrowable, SdkApiExceptionCompanion, SdkApiException, SdkRunnableResultCompanion, SdkParamType, SdkParam, SdkKotlinEnumCompanion, SdkKotlinEnum<E>, SdkRoutineExecuteCompanion, SdkViewStrategy, SdkViewConfig, UIViewController, SdkKotlinException, SdkKotlinRuntimeException, SdkKotlinIllegalStateException, SdkKotlinx_serialization_coreSerializersModule, SdkKotlinx_serialization_coreSerialKind, SdkKotlinNothing;
 
-@protocol SdkKotlinx_serialization_coreKSerializer, SdkKotlinComparable, SdkUiModifier, SdkKotlinIterator, SdkKotlinx_serialization_coreEncoder, SdkKotlinx_serialization_coreSerialDescriptor, SdkKotlinx_serialization_coreSerializationStrategy, SdkKotlinx_serialization_coreDecoder, SdkKotlinx_serialization_coreDeserializationStrategy, SdkUiModifierElement, SdkKotlinx_serialization_coreCompositeEncoder, SdkKotlinAnnotation, SdkKotlinx_serialization_coreCompositeDecoder, SdkKotlinx_serialization_coreSerializersModuleCollector, SdkKotlinKClass, SdkKotlinKDeclarationContainer, SdkKotlinKAnnotatedElement, SdkKotlinKClassifier;
+@protocol SdkKotlinx_serialization_coreKSerializer, SdkKotlinComparable, SdkKotlinIterator, SdkKotlinx_serialization_coreEncoder, SdkKotlinx_serialization_coreSerialDescriptor, SdkKotlinx_serialization_coreSerializationStrategy, SdkKotlinx_serialization_coreDecoder, SdkKotlinx_serialization_coreDeserializationStrategy, SdkKotlinx_serialization_coreCompositeEncoder, SdkKotlinAnnotation, SdkKotlinx_serialization_coreCompositeDecoder, SdkKotlinx_serialization_coreSerializersModuleCollector, SdkKotlinKClass, SdkKotlinKDeclarationContainer, SdkKotlinKAnnotatedElement, SdkKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -390,7 +390,7 @@ __attribute__((swift_name("ViewStrategy")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("WebView_iosKt")))
 @interface SdkWebView_iosKt : SdkBase
-+ (UIViewController *)WebViewControllerConfig:(SdkViewConfig *)config modifier:(id<SdkUiModifier>)modifier onCreated:(void (^)(void))onCreated onDispose:(void (^)(void))onDispose __attribute__((swift_name("WebViewController(config:modifier:onCreated:onDispose:)")));
++ (UIViewController *)WebViewControllerConfig:(SdkViewConfig *)config __attribute__((swift_name("WebViewController(config:)")));
 @end
 
 __attribute__((swift_name("KotlinException")))
@@ -472,21 +472,6 @@ __attribute__((swift_name("KotlinEnumCompanion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) SdkKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
-@end
-
-
-/**
- * @note annotations
- *   androidx.compose.runtime.Stable
-*/
-__attribute__((swift_name("UiModifier")))
-@protocol SdkUiModifier
-@required
-- (BOOL)allPredicate:(SdkBoolean *(^)(id<SdkUiModifierElement>))predicate __attribute__((swift_name("all(predicate:)")));
-- (BOOL)anyPredicate:(SdkBoolean *(^)(id<SdkUiModifierElement>))predicate __attribute__((swift_name("any(predicate:)")));
-- (id _Nullable)foldInInitial:(id _Nullable)initial operation:(id _Nullable (^)(id _Nullable, id<SdkUiModifierElement>))operation __attribute__((swift_name("foldIn(initial:operation:)")));
-- (id _Nullable)foldOutInitial:(id _Nullable)initial operation:(id _Nullable (^)(id<SdkUiModifierElement>, id _Nullable))operation __attribute__((swift_name("foldOut(initial:operation:)")));
-- (id<SdkUiModifier>)thenOther:(id<SdkUiModifier>)other __attribute__((swift_name("then(other:)")));
 @end
 
 __attribute__((swift_name("KotlinIterator")))
@@ -635,11 +620,6 @@ __attribute__((swift_name("Kotlinx_serialization_coreDecoder")))
 - (int16_t)decodeShort __attribute__((swift_name("decodeShort()")));
 - (NSString *)decodeString __attribute__((swift_name("decodeString()")));
 @property (readonly) SdkKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
-@end
-
-__attribute__((swift_name("UiModifierElement")))
-@protocol SdkUiModifierElement <SdkUiModifier>
-@required
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreCompositeEncoder")))
