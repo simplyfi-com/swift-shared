@@ -362,6 +362,7 @@ __attribute__((swift_name("RoutineExecute.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ViewConfig")))
 @interface SdkViewConfig : SdkBase
+- (instancetype)initWithUrl:(NSString *)url token:(NSString *)token __attribute__((swift_name("init(url:token:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithUrl:(NSString *)url token:(NSString *)token strategy:(SdkViewStrategy *)strategy viewId:(SdkInt * _Nullable)viewId tokenKey:(NSString *)tokenKey captureBackPress:(BOOL)captureBackPress __attribute__((swift_name("init(url:token:strategy:viewId:tokenKey:captureBackPress:)"))) __attribute__((objc_designated_initializer));
 - (SdkViewConfig *)doCopyUrl:(NSString *)url token:(NSString *)token strategy:(SdkViewStrategy *)strategy viewId:(SdkInt * _Nullable)viewId tokenKey:(NSString *)tokenKey captureBackPress:(BOOL)captureBackPress __attribute__((swift_name("doCopy(url:token:strategy:viewId:tokenKey:captureBackPress:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
