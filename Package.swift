@@ -2,20 +2,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "sdk-ios",
+    name: "sdk",
     platforms: [
         .iOS(.v16)
     ],
     products: [
         .library(
-            name: "sdk-ios",
-            targets: ["sdk-ios"]
+            name: "sdk",
+            targets: ["sdk"]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: "sdk-ios",
-            path: "./sdk-ios.xcframework"
+            name: "sdk",
+            path: "./sdk.xcframework"
         ),
     ]
 )
